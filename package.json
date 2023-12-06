@@ -1,0 +1,34 @@
+{
+  "name": "bjut-autologin-ts",
+  "version": "1.0.0",
+  "description": "用于北工大校园网自动登录的TypeScript脚本",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "module": "lib/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs"
+  },
+  "keywords": [
+    "bjut",
+    "autologin",
+    "wifi",
+    "ethernet",
+    "automation"
+  ],
+  "homepage": "https://github.com/CJGroup/bjut-autologin-ts",
+  "bugs": {
+    "url": "https://github.com/CJGroup/bjut-autologin-ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CJGroup/bjut-autologin-ts.git"
+  },
+  "author": "ConstasJ <constasj@qq.com>",
+  "license": "MIT"
+}
