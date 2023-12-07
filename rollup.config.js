@@ -5,13 +5,13 @@ export default defineConfig([
     {
         input: 'src/index.ts',
         output: {
-            format: 'esm',
+            format: 'cjs',
             file: 'lib/index.js',
         },
-        external: ['node:os','cheerio','axios', 'qs'],
+        external: ['node:os','qs','axios','cheerio','iconv-lite'],
         plugins: [
             ts({
-                tsconfig: 'tsconfig.json'
+                tsconfig: 'tsconfig.json',
             })
         ]
     }
