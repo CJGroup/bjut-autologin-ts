@@ -6,28 +6,12 @@ export default defineConfig([
         input: 'src/index.ts',
         output: {
             format: 'esm',
-            file: 'lib/index.mjs',
-        },
-        external: [],
-        plugins: [
-            ts({
-                tsconfig: {
-                    fileName: 'tsconfig.json',
-                    hook: (resolvedConfig) => ({...resolvedConfig, declaration: false})
-                }
-            })
-        ]
-    },
-    {
-        input: 'src/index.ts',
-        output: {
-            format: 'cjs',
             file: 'lib/index.js',
         },
-        external: [],
+        external: ['node:os','cheerio','axios', 'qs'],
         plugins: [
             ts({
-                tsconfig: 'tsconfig.json',
+                tsconfig: 'tsconfig.json'
             })
         ]
     }

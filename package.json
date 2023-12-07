@@ -2,15 +2,10 @@
   "name": "bjut-autologin-ts",
   "version": "1.0.0",
   "description": "用于北工大校园网自动登录的TypeScript脚本",
+  "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "module": "lib/index.mjs",
-  "exports": {
-    ".": {
-      "require": "./lib/index.js",
-      "import": "./lib/index.mjs"
-    }
-  },
+  "module": "lib/index.js",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs"
   },
@@ -36,6 +31,7 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/node": "^20.10.3",
+    "@types/qs": "^6.9.10",
     "eslint": "^8.55.0",
     "prettier": "^3.1.0",
     "rollup": "^4.6.1",
@@ -43,5 +39,10 @@
     "semantic-release": "^22.0.10",
     "ts-node": "^10.9.1",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cheerio": "1.0.0-rc.12",
+    "qs": "^6.11.2"
   }
 }
