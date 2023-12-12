@@ -8,7 +8,7 @@ export default defineConfig([
             format: 'cjs',
             file: 'lib/index.js',
         },
-        external: ['node:os','qs','axios','cheerio','iconv-lite'],
+        external: ['node:os','node:child_process','qs','axios','cheerio','iconv-lite'],
         plugins: [
             ts({
                 tsconfig: 'tsconfig.json',
